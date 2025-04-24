@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: busybox
+  name: {{ .Values.name }}
   labels:
     app: busybox
 spec:
