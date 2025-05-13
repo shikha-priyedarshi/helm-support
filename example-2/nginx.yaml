@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nginx-project
 spec:
-  replicas: {{.Values.replicas}}
+  replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
       app: nginx-project
