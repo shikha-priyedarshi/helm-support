@@ -1,2 +1,3 @@
 replicas: 2
 name: nginx-project-2
+namespace: nginx
