@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-project-2
-  namespace: busybox
+  namespace: {{ .Values.namespace }}
   labels:
     app: nginx-project-2
 spec:
