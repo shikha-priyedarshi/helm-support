@@ -1,3 +1,4 @@
 replicas: 2
+namespace: postgres
 image:
   imagePullPolicy: Always
