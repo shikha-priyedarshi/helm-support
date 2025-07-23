@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-project-example-1
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: nginx-project
+  template:
+    metadata:
+      labels:
+        app: nginx-project
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.17.3
+          imagePullPolicy: {{ .Values.containers.image.imagePullPolicy }}
+          ports:
+            - containerPort: 80
+          env:
+            - name: RAW_JSON_CONFIG
+              value: {{ .Values.config.rawJson | quote }}
