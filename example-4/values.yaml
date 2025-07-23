@@ -1,0 +1,7 @@
+replicas: 2
+namespace: postgres
+containers:
+  image:
+    imagePullPolicy: Always
+config:
+  rawJson: '{"key":"value","number":123}'
